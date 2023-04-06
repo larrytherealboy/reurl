@@ -1,0 +1,16 @@
+<div id="show" class="d-flex justify-content-center mt-5">
+  <div id="content" class="row">
+    {{#if urlNew}}
+    <h3>Success! Please use the link:</h3>
+    {{else}}
+    <h3>Reurl is already done, here is the link:</h3>
+    {{/if}}
+
+
+    <a href="{{url}}">
+      <h3>{{reurl}}</h3>
+    </a>
+    <a href="/" class="btn btn-primary d-md-block d-grid gap-1 col-6 mx-auto mt-2" id="copy-button" tabindex="-1" role="button">back</a>
+
+  </div>
+</div>

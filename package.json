@@ -6,12 +6,21 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "seed": "node models/seeds/reurlSeeder.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "copy-text-to-clipboard": "^3.1.0",
+    "copy-to-clipboard": "^3.3.3",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.9.7"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.3"
   }
 }
