@@ -1,22 +1,20 @@
 // generate 5 letters
-function generateUrl() {
+function generateLetters() {
   const lowerCaseLetters = 'abcdefghijklmnopqrstuvwxyz'
   const upperCaseLetters = lowerCaseLetters.toUpperCase()
   const numbers = '1234567890'
-  const originReurl = 'https://reurl.herokuapp.com/'
 
   let collection = lowerCaseLetters + upperCaseLetters + numbers
   collection = collection.split('')
 
-  let reurlLetters = ''
+  let letters = ''
   for (let i = 0; i < 5; i++) {
     let randomIndex = Math.floor(Math.random() * collection.length)
     singleLetter = collection[randomIndex]
-    reurlLetters += singleLetter
+    letters += singleLetter
   }
 
-  const reurl = originReurl + reurlLetters
-  return reurl
+  return letters
 }
 
-module.exports = generateUrl 
+module.exports = generateLetters 

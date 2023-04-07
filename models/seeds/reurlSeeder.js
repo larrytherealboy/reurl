@@ -5,7 +5,7 @@ const db = require('../../config/mongoose')
 db.once('open', () => {
   Reurl.create({
     url: "https://www.google.com.tw/?hl=zh_TW",
-    reurl: "https://reurl.herokuapp.com/aaaaa"
+    letters: "aaaaa"
   })
     .then(() => {
       console.log('Seeder done!')

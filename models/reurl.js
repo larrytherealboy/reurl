@@ -5,7 +5,7 @@ const reurlSchema = new Schema ({
   url: {
     type: String
   },
-  reurl: {
+  letters: {
     type: String
   }
 })

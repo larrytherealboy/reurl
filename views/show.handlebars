@@ -6,11 +6,27 @@
     <h3>Reurl is already done, here is the link:</h3>
     {{/if}}
 
-
     <a href="{{url}}">
-      <h3>{{reurl}}</h3>
+      <div id="reurl">
+        <p>{{header}}/{{letters}}</p>
+      </div>
     </a>
-    <a href="/" class="btn btn-primary d-md-block d-grid gap-1 col-6 mx-auto mt-2" id="copy-button" tabindex="-1" role="button">back</a>
+    <div class="col">
+      <button class="btn btn-success d-md-block d-grid gap-1 col-6 mx-auto mt-2" onclick="copy()">Copy</button>
+
+      <a href="/" class="btn btn-secondary d-md-block d-grid gap-1 col-6 mx-auto mt-2" id="copy-button" tabindex="-1"
+        role="button">Back</a>
+    </div>
+
+    <script>
+      function copy() {
+          const copyText = document.querySelector("#reurl")
+          navigator.clipboard.writeText(copyText.innerText)
+            .then(() => alert(`Copied the text {{header}}/{{letters}}`))
+            .catch(error => {console.log(error)})
+        }
+    </script>
+    
 
   </div>
 </div>
