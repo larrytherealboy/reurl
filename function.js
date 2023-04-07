@@ -3,7 +3,7 @@ function generateUrl() {
   const lowerCaseLetters = 'abcdefghijklmnopqrstuvwxyz'
   const upperCaseLetters = lowerCaseLetters.toUpperCase()
   const numbers = '1234567890'
-  const originReurl = 'https://reurl.cc/'
+  const originReurl = 'https://reurl.herokuapp.com/'
 
   let collection = lowerCaseLetters + upperCaseLetters + numbers
   collection = collection.split('')

@@ -4,12 +4,13 @@ const Reurl = require('../../models/reurl')
 const generateReurl = require('../../function')
 // const copy = require('copy-to-clipboard')
 
-router.post('/', (req, res) => {
-  let url = req.body.url
-  let reurl = ''
-  let urlNew = ''
+let reurl = ''
+let urlNew = ''
 
+router.post('/', (req, res) => {
   // 如果傳進來的url沒有在資料庫裡，才建立新資料，否則回傳原有資料
+  let url = req.body.url
+  
   Reurl.findOne({ 'url': url })
     .then(findUrl => {
       if (findUrl === null) {
